@@ -40,11 +40,11 @@ const Summersale = () => {
                 <div className='h-full'>
                     <img src={bannerFive} alt="" className='w-full h-full object-cover'/>
                 </div>            
-                <div className="h-full sm:h-[350px] bg-[#f4f4f4] flex flex-col items-center justify-center gap-6">
+                <div className="min-[320px]:h-[350px] sm:h-[350px] md:h-[350px] lg:h-full py-3 bg-[#f4f4f4] flex flex-col items-center justify-center gap-6">
                     <span className='flex flex-col items-center justify-center gap-1 relative summer'>
-                        <span className='text-xl font-bodyFont uppercase text-black-500 z-[999]'>Discount</span>
-                        <p className='text-5xl font-logoFont text-red-600 z-[999]'>Summer 2019</p>
-                        <span className='flex gap-2 items-center z-[999]'><span className='text-md text-black-500 font-semibold uppercase'>sale</span><span className='text-red-600 font-semibold text-md'>50%</span></span>
+                        <span className='text-xl max-[576px]:text-[16px] font-bodyFont uppercase text-black-500 z-[999]'>Discount</span>
+                        <p className='text-5xl max-[576px]:text-3xl font-logoFont text-red-600 z-[999]'>Summer 2019</p>
+                        <span className='flex gap-2 items-center z-[999]'><span className='text-md max-[576px]:text-sm text-black-500 font-semibold uppercase'>sale</span><span className='text-red-600 font-semibold text-md'>50%</span></span>
                     </span>
                     <span id="timer" className='text-4xl font-bodyFont text-black-500'></span>
                     {/* <div className="bg-white w-[200px] h-[200px] rounded-full absolute top-[20%] z-50"></div> */}

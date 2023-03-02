@@ -13,9 +13,9 @@ const Banner = () => {
                     <img src={bannerOne} alt="" className="w-full h-full object-cover "/>
                 </div>
                 <div className='absolute left-8 top-[50%] -translate-y-1/2'>
-                    <h5 className='text-3xl font-logoFont'>Woman's fashion</h5>
+                    <h5 className='max-[576px]:text-2xl text-3xl font-logoFont'>Woman's fashion</h5>
                     <p className='my-3 text-sm font-titleFont text-black-500'>Lorem Ipsum is simply dummy text of the printing and<br />printing and typesetting industry. </p>
-                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer'>Shop now</span>
+                    <span className='text-xl max-[576px]:text-[15px] text-black-700 font-titleFont font-bold shop-now relative cursor-pointer'>Shop now</span>
                 </div>
             </div>
             <div className="grid grid-cols-1">
@@ -24,34 +24,34 @@ const Banner = () => {
                             <div className='relative'>
                                 <img src={bannerTwo} alt="" className="w-full h-full object-cover"/>
                                 <div className='absolute left-8 top-[50%] -translate-y-1/2'>
-                                    <h5 className='text-xl font-titleFont font-semibold'>Man's fashion</h5>
+                                    <h5 className='max-[576px]:text-[17px] text-xl font-titleFont font-semibold'>Man's fashion</h5>
                                     <p className='my-1 text-sm font-titleFont text-black-500'>230 items</p>
-                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer'>Shop now</span>
+                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer max-[576px]:text-[15px]'>Shop now</span>
                                 </div>
                             </div>
                         
                         <div className='relative'>
                             <img src={bannerThree} alt="" className="w-full h-full object-cover"/> 
                             <div className='absolute left-8 top-[50%] -translate-y-1/2'>
-                                    <h5 className='text-xl font-titleFont font-semibold'>Kid's fashion</h5>
+                                    <h5 className='max-[576px]:text-[17px] text-xl font-titleFont font-semibold'>Kid's fashion</h5>
                                     <p className='my-1 text-sm font-titleFont text-black-500'>120 items</p>
-                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer'>Shop now</span>
+                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer max-[576px]:text-[15px]'>Shop now</span>
                                 </div>
                         </div>
                         <div className='relative'>
                             <img src={bannerFour} alt="" className="w-full h-full object-cover"/>
                             <div className='absolute left-8 top-[50%] -translate-y-1/2'>
-                                    <h5 className='text-xl font-titleFont font-semibold'>Cosmetics</h5>
+                                    <h5 className='max-[576px]:text-[17px] text-xl font-titleFont font-semibold'>Cosmetics</h5>
                                     <p className='my-1 text-sm font-titleFont text-black-500'>500 items</p>
-                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer'>Shop now</span>
+                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer max-[576px]:text-[15px]'>Shop now</span>
                                 </div>
                         </div>
                         <div className='relative'>
                             <img src={bannerFive} alt="" className="w-full h-full object-cover"/>
                             <div className='absolute left-8 top-[50%] -translate-y-1/2'>
-                                    <h5 className='text-xl font-titleFont font-semibold'>Accessories</h5>
+                                    <h5 className='max-[576px]:text-[17px] text-xl font-titleFont font-semibold'>Accessories</h5>
                                     <p className='my-1 text-sm font-titleFont text-black-500'>300 items</p>
-                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer'>Shop now</span>
+                                    <span className='text-xl text-black-700 font-titleFont font-bold shop-now relative cursor-pointer max-[576px]:text-[15px]'>Shop now</span>
                                 </div> 
                         </div>
                     </div>

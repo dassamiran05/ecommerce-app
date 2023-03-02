@@ -56,9 +56,9 @@ const Header = ({cartItems, handleDeleteproduct}) => {
                     </ul>
                 </div>
                 <div className="w-[33%] flex items-center gap-3 justify-end relative">
-                    <div>
-                    <span className='text-sm font-titleFont cursor-pointer'>Login</span> /        
-                    <span className='text-sm font-titleFont cursor-pointer'>Register</span>
+                    <div className='max-[678px]:hidden'>
+                        <span className='text-sm font-titleFont cursor-pointer'>Login</span> /        
+                        <span className='text-sm font-titleFont cursor-pointer'>Register</span>
                     </div>
                     <div >
                         <SearchIcon className="rotate-90 cursor-pointer" />
@@ -111,16 +111,17 @@ const Header = ({cartItems, handleDeleteproduct}) => {
                 </div>
                 {
                         mobilemenu && (
-                            <ul className="absolute pt-6  top-0 left-0 right-0 w-full h-screen flex flex-col items-center gap-8 mobile-nav z-50 bg-white overscroll-none">
-                            <span className="cursor-pointer w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[red] text-white" onClick={() => setMobilemenu(false)}><CloseIcon /></span>
-                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Home</li>
-                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Women's</li>
-                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Men's</li>
-                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Shop</li>
-                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Pages</li>
-                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Blog</li>
-                        <li className="uppercase relative cursor-pointer font-normal hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Contact</li>
-                    </ul>
+                            <ul className="fixed pt-4  top-0 left-0 right-0 w-full h-screen flex flex-col items-center gap-8 mobile-nav z-50 bg-white overscroll-none">
+                                <span className="cursor-pointer w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[red] text-white" onClick={() => setMobilemenu(false)}><CloseIcon /></span>
+                                <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Home</li>
+                                <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Women's</li>
+                                <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Men's</li>
+                                <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Shop</li>
+                                <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Pages</li>
+                                <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Blog</li>
+                                <li className="uppercase relative cursor-pointer font-normal  mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Contact</li>
+                                <li className="uppercase relative cursor-pointer font-normal hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}><span>Login</span> / <span>Register</span></li>
+                            </ul>
                         )
                     }
             </div>
