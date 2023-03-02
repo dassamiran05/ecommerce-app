@@ -4,11 +4,13 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import './header.css';
 import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = ({cartItems, handleDeleteproduct}) => {
     const [showcartdiv, setShowcartdiv] = useState(false);
 
     const [totalprice, setTotalprice] = useState(null);
+    const [mobilemenu, setMobilemenu] = useState(false);
 
     useEffect(() => {
         const getTotalPrice = () => {
@@ -27,14 +29,23 @@ const Header = ({cartItems, handleDeleteproduct}) => {
         alert("Sorry no link after that");
     }
 
+
+    const handleClick = () => {
+        setMobilemenu(false);
+    }
+
+
+   
+
     return (
         <div className='shadow-lg mb-2'>
             <div className="max-w-screen-xl mx-auto h-16 flex items-center justify-between px-5">
                 <div className="w-[33%]">
                     <span className="font-logoFont cursor-pointer">Lorem</span>
                 </div>
-                <div className="w-[33%] flex items-center justify-center">
-                    <ul className="flex items-center gap-8 nav-manu">
+                <div className="w-[33%] flex items-center justify-center relative">
+                <div className="md:inline-flex lg:hidden cursor-pointer" onClick={() => setMobilemenu(!mobilemenu)}><MenuIcon /></div>
+                    <ul className="hidden items-center gap-8 nav-manu lg:flex">
                         <li className="uppercase relative cursor-pointer font-normal">Home</li>
                         <li className="uppercase relative cursor-pointer font-normal">Women's</li>
                         <li className="uppercase relative cursor-pointer font-normal">Men's</li>
@@ -63,8 +74,8 @@ const Header = ({cartItems, handleDeleteproduct}) => {
 
                     {
                         showcartdiv && (
-                            <div className="w-[400px] bg-white p-4 h-auto border-[1px] border-gray-300 absolute top-[20px] right-0 flex flex-col z-50 shadow-md">
-                    <span  className="fixed p-2 border-[1px] border-gray-200 right-[10px] top-[40px] z-50 bg-[red] text-white cursor-pointer" onClick={() => setShowcartdiv(false)}><CloseIcon /></span>
+                            <div className="w-[400px] bg-white px-4 pb-4 pt-8 h-auto border-[1px] border-gray-300 absolute top-[20px] right-0 flex flex-col z-50 shadow-md">
+                    <span  className="  absolute p-2 w-[20px] h-[20px] flex items-center justify-center border-[1px] border-gray-200 right-[10px] top-[10px] z-50 bg-[red] text-white cursor-pointer" onClick={() => setShowcartdiv(false)}><CloseIcon fontSize="15px"/></span>
 
                             {
                             cartItems.length > 0 ?
@@ -98,6 +109,20 @@ const Header = ({cartItems, handleDeleteproduct}) => {
 
                     
                 </div>
+                {
+                        mobilemenu && (
+                            <ul className="absolute pt-6  top-0 left-0 right-0 w-full h-screen flex flex-col items-center gap-8 mobile-nav z-50 bg-white overscroll-none">
+                            <span className="cursor-pointer w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[red] text-white" onClick={() => setMobilemenu(false)}><CloseIcon /></span>
+                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Home</li>
+                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Women's</li>
+                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Men's</li>
+                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Shop</li>
+                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Pages</li>
+                        <li className="uppercase relative cursor-pointer font-normal mb-2 hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Blog</li>
+                        <li className="uppercase relative cursor-pointer font-normal hover:scale-110 hover:font-semibold duration-400" onClick={() => handleClick()}>Contact</li>
+                    </ul>
+                        )
+                    }
             </div>
         </div>
     );

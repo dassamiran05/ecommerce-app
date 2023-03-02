@@ -36,11 +36,11 @@ const Summersale = () => {
     }, []);
     return (
         <div className="max-w-screen-xl mx-auto sm:px-4 mt-3 mb-5">   
-            <div className='grid lg:grid-cols-2 sm:grid-cols-1 h-[400px]'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1 h-auto'>
                 <div className='h-full'>
                     <img src={bannerFive} alt="" className='w-full h-full object-cover'/>
                 </div>            
-                <div className="h-full bg-[#f4f4f4] flex flex-col items-center justify-center gap-6">
+                <div className="h-full sm:h-[350px] bg-[#f4f4f4] flex flex-col items-center justify-center gap-6">
                     <span className='flex flex-col items-center justify-center gap-1 relative summer'>
                         <span className='text-xl font-bodyFont uppercase text-black-500 z-[999]'>Discount</span>
                         <p className='text-5xl font-logoFont text-red-600 z-[999]'>Summer 2019</p>

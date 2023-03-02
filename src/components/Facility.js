@@ -6,9 +6,9 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 
 const Facility = () => {
     return (
-        <div className='py-9'>
+        <div className='py-9 px-3'>
             <div className='max-w-screen-xl mx-auto sm:px-4'>
-                <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4'>
                     <div className='flex items-center gap-5'>
                         <div>
                             <LocalShippingIcon fontSize="large" style={{color: "red"}}/>
